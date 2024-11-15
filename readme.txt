@@ -1,0 +1,1 @@
+Este proyecto consiste en la creación de una página web moderna y responsiva utilizando HTML y CSS. El objetivo principal es demostrar el uso de técnicas avanzadas de diseño, como Grid Layout y Flexbox, para lograr una estructura visual atractiva, adaptable a diferentes dispositivos y fácil de mantener.
