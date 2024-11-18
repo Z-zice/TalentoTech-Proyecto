@@ -57,7 +57,7 @@ nav a {
     
 }
 .sobre-nosotros1 img{
-    width: 400px;
+    width: 600px;
     padding: 100px;
     
 }
@@ -176,7 +176,18 @@ button:hover {
     padding-top: 100px;
 }
 
+.card img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
+.card img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.container :hover .overlay {
+    opacity: 1;
+}
 
 /* Media Query para pantallas más pequeñas */
 @media screen and (max-width: 1200px) {
@@ -329,8 +340,8 @@ button:hover {
     }
 }
 
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 480px) {
+/* Para pantallas pequeñas*/
+@media (max-width: 500px) {
     label {
         font-size: 0.9rem;
     }
