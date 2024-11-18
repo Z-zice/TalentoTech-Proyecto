@@ -93,11 +93,11 @@ nav a {
 
 /* Estilo para los enlaces al pasar el mouse */
 nav a:hover {
-    color: #007bff; /* Color al pasar el mouse */
+    color: #007bff; 
 }
 
 .carrito {
-    color: #007bff; /* Color especial para el carrito */
+    color: #007bff; 
 }
 
 footer {
@@ -176,18 +176,7 @@ button:hover {
     padding-top: 100px;
 }
 
-.card img {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
 
-.card img:hover {
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.container :hover .overlay {
-    opacity: 1;
-}
 
 /* Media Query para pantallas más pequeñas */
 @media screen and (max-width: 1200px) {
