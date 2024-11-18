@@ -5,6 +5,7 @@
 }
 
 body {
+    padding-top: 37px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -17,11 +18,17 @@ header {
     left: 0;
     width: 100%;
     justify-content: space-between;
-    background-color: #f5f5dc; /* Color beige */
+    background-color: #f5f5dc; 
     
 }
 
+.img-inicio img{
+    
+    width: 100%;
+    height: 90%;
 
+    
+}
 
 .logo img {
     height: 80px; /* Ajusta el tamaño del logo */
@@ -42,6 +49,45 @@ nav a {
     display: flex;
     align-items: center;
 }
+.sobre-nosotros1{
+    display: flex;
+    padding: 40px;
+    
+   
+    
+}
+.sobre-nosotros1 img{
+    width: 800px;
+    padding: 100px;
+    border-radius: 8px;
+}
+.sobre-nosotros1 p{
+    margin-top: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    line-height: 1.4;
+}
+.sobre-nosotros2{
+    display: flex;
+    padding: 40px;
+  
+}
+.sobre-nosotros2 img{
+    width: 400px;
+    border-radius: 8px;
+    
+}
+.sobre-nosotros2 p{
+    margin-top: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    line-height: 1.4;
+    margin-left:  50px;
+    margin-right: 300px;
+    margin-top: -8px;
+}
+
+
 
 
 
@@ -55,7 +101,8 @@ nav a:hover {
 }
 
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 10px;
     background-color: #333;
     color: white;
@@ -71,15 +118,11 @@ footer {
 
 /*estilo page-contacto*/
 
-
-
 .content {
-    
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
 }
 
 .formulario label {
@@ -87,7 +130,6 @@ footer {
     margin-bottom: 8px;
     font-weight: bold;
     color: #333333;
-    
 }
 
 .formulario input,
@@ -122,4 +164,112 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* Estilos para el contenedor de productos */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.card img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.container :hover .overlay {
+    opacity: 1;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding-top: 50px; 
+    }
+
+    /* Asegurar que el formulario se vea bien en dispositivos pequeños */
+    .formulario input,
+    .formulario textarea {
+        font-size: 16px; 
+    }
+
+    button {
+        font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        padding: 10px; 
+    }
+
+    .formulario input,
+    .formulario textarea {
+        font-size: 16px; 
+    }
+
+    button {
+        font-size: 14px; 
+        padding: 12px; 
+    }
+}
+}
+
+
+
+/* Estilo para el contenedor de las reseñas */
+.resenias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en el grid */
+    gap: 10px; /* Espacio entre las reseñas */
+    margin: 20px auto; /* Centrado y márgenes */
+    max-width: 1000px; /* Limita el ancho máximo */
+    padding: 20px; /* Padding para separar contenido */
+    margin-top: 100px;
+}
+
+/* Estilo para cada reseña individual */
+.resenias {
+    background-color: #ffffff;
+    border-left: 2px solid rgb(42, 41, 41);  /* Línea negra en el lado izquierdo */
+    border-right: 2px solid rgb(42, 41, 41); /* Línea negra en el lado derecho */
+    border-top: 2px solid rgb(42, 41, 41);   /* Línea negra arriba */
+    border-bottom: 2px solid rgb(42, 41, 41); /* Línea negra abajo */
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.resenias h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px; /* Espacio debajo del nombre */
+    text-align: center; /* Centrado del nombre */
+}
+
+.resenias p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: center; /* Centrado del texto de la reseña */
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .resenias {
+        grid-template-columns: 1fr; /* Cambiar a una columna en pantallas más pequeñas */
+    }
 }
