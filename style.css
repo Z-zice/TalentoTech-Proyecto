@@ -10,6 +10,7 @@ body {
 }
 
 
+
 header {
     position: fixed;
     display: flex;
@@ -86,7 +87,10 @@ nav a {
     margin-right: 300px;
     margin-top: -8px;
 }
-
+.btn.btn-primary {
+    font-size: 16px;
+    width: auto;
+  }
 
 
 
@@ -99,6 +103,10 @@ nav a:hover {
 .carrito {
     color: #007bff; 
 }
+.relleno{
+    padding-top: 50%;
+
+}
 
 footer {
     display: flex;
@@ -106,6 +114,7 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
+    
 }
 
 .content {
@@ -118,12 +127,7 @@ footer {
 
 /*estilo page-contacto*/
 
-.content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+
 
 .formulario label {
     display: block;
@@ -164,16 +168,6 @@ button {
 
 button:hover {
     background-color: #0056b3;
-}
-
-/* Estilos para el contenedor de productos */
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 100px;
 }
 
 .card img {
@@ -255,6 +249,50 @@ button:hover {
         height: auto;
     }
 }
+/* Contenedor de reseñas */
+.grid-resenias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    gap: 20px; /* Espaciado entre las columnas y filas */
+    padding: 100px;
+    justify-content: center;
+  }
+  
+  /* Estilo de cada reseña */
+  .resenias {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center; /* Centrar texto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
+  }
+  
+  /* Efecto al pasar el mouse */
+  .resenias:hover {
+    transform: scale(1.05); /* Crecimiento suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mayor sombra */
+  }
+  
+  /* Título de las reseñas */
+  .resenias h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Texto de las reseñas */
+  .resenias p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Adaptación a pantallas pequeñas */
+  @media (max-width: 768px) {
+    .grid-resenias {
+      grid-template-columns: 1fr; /* Una sola columna en dispositivos pequeños */
+    }
+  }
 
 
 @media (max-width: 480px) {
@@ -274,49 +312,6 @@ button:hover {
         font-size: 0.9rem;
         padding: 10px;
     }
-
-
-
-
-
-/* media cuery reseñas */
-.resenias {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en el grid */
-    gap: 10px; /* Espacio entre las reseñas */
-    margin: 20px auto; /* Centrado y márgenes */
-    max-width: 1000px; /* Limita el ancho máximo */
-    padding: 20px; /* Padding para separar contenido */
-    margin-top: 100px;
-}
-
-/* Estilo para cada reseña individual */
-.resenias {
-    background-color: #ffffff;
-    border-left: 2px solid rgb(42, 41, 41);  
-    border-right: 2px solid rgb(42, 41, 41); 
-    border-top: 2px solid rgb(42, 41, 41);   
-    border-bottom: 2px solid rgb(42, 41, 41); 
-    padding: 20px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.resenias h3 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px; 
-    text-align: center; 
-}
-
-.resenias p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-    text-align: center;
-}
-
-
-
 
 /* Media query contacto */
 @media screen and (max-width: 768px) {
@@ -360,4 +355,5 @@ button:hover {
 
 
 }
+
 }
